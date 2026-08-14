@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <!-- Logo goes here-->
+         <!--- Navigation links--->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="service.html">Services</a>
+        <a href="pricelist.html">Price List</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="inquiry.html">Inquiry</a>
+    </nav>
+    </header>
+    <!-- Main content -->
+<main>
+
+    <!-- Inquiry section -->
+    <section>
+        <h2>Make an Inquiry</h2>
+
+        <p>
+            If you have any questions about our services or would like
+            more information, please send us an inquiry.
+        </p>
+
+        <!-- Inquiry form -->
+        <form>
+
+            <label for="inquiry-name">Full Name:</label>
+            <input type="text" id="inquiry-name" name="inquiry-name">
+
+            <br><br>
+
+            <label for="inquiry-email">Email:</label>
+            <input type="email" id="inquiry-email" name="inquiry-email">
+
+            <br><br>
+
+            <label for="inquiry-message">Your Inquiry:</label>
+            <br>
+            <textarea id="inquiry-message"
+                      name="inquiry-message"
+                      rows="6"
+                      cols="40"></textarea>
+
+            <br><br>
+
+            <input type="submit" value="Submit Inquiry">
+
+        </form>
+
+    </section>
+
+
+    <!-- Booking section -->
+    <section>
+        <h2>Book Your Appointment</h2>
+
+        <p>
+            Clients can make an appointment with Lily Beauty's Studio
+            at a time that is convenient for them.
+        </p>
+
+        <!-- Booking form -->
+        <form>
+
+            <label for="booking-name">Full Name:</label>
+            <input type="text" id="booking-name" name="booking-name">
+
+            <br><br>
+
+            <label for="phone">Cell Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <br><br>
+
+            <label for="service">Select Service:</label>
+            <select id="service" name="service">
+
+                <option value="">Select a service</option>
+
+                <option value="hair-wash">
+                    Hair Wash - R80
+                </option>
+
+                <option value="treatment">
+                    Treatment - R150
+                </option>
+
+                <option value="wig-installation-styling">
+                    Wig Installation and Styling - R450
+                </option>
+
+                <option value="braiding">
+                    Braiding
+                </option>
+
+            </select>
+
+            <br><br>
+
+            <label for="date">Appointment Date:</label>
+            <input type="date" id="date" name="date">
+
+            <br><br>
+
+            <label for="time">Appointment Time:</label>
+            <input type="time" id="time" name="time">
+
+            <br><br>
+
+            <input type="submit" value="Book Appointment">
+
+        </form>
+
+    </section>
+
+</main>
+</body>
+</html>
