@@ -1,14 +1,14 @@
-# #Lily Beauty's Studio
+##Lily Beauty's Studio
 # Student Information
 - Student Name: Avela Philiso
 - Student Number: ST10506178
 - Module: WEDE5020- Web Development
 -------------------------------------------------
-# # Project Overview
-Lily Beauty's Studio is a hair salon based in Port Elizabeth. The website was created to improve the salon's online presence
-and make it easier for customer to find information about the salon and services offered.
+## Project Overview
+- Lily Beauty's Studio is a hair salon based in Port Elizabeth. The website was created to improve the salon's online        presence
+  and make it easier for customer to find information about the salon and services offered.
 ----------------------------------------------------------
-# # Website Details
+## Website Details
 ### Goals
 - The goal of the website is to improve customer convenience by allowing clients to book appointments and provide feedback online. 
   The website will improve customer satisfaction and support better business decision making through efficient data management.
