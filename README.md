@@ -2,7 +2,7 @@
 # Student Information
 - Student Name: Avela Philiso
 - Student Number: ST10506178
-  - Module: WEDE5020- Web Development
+- Module: WEDE5020- Web Development
 -------------------------------------------------
 # # Project Overview
 Lily Beauty's Studio is a hair salon based in Port Elizabeth. The website was created to improve the salon's online presence
