@@ -3,36 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lily's Beauty Studio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
+
 <body>
-    <!-- Logo goes here-->
-         <!--- Navigation links--->
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="pages/about.html">About Us</a>
-        <a href="pages/service.html">Services</a>
-        <a href="pages/gallery.html">Gallery</a>
-        <a href="pages/contact.html">Contact Us</a>
-        <a href="pages/inquiry.html">Inquiry</a>
-    </nav>
+
+    <!-- Navigation -->
+    <header>
+
+        <!-- Logo and business name -->
+        <a href="../index.html" class="nav-logo">
+            <img src="/assets/images/Lily's logo .png"
+                 alt="Lily's Beauty Studio Logo">
+
+            <span class="brand-name">Lily's Beauty Studio</span>
+        </a>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="pages/about.html">About Us</a>
+            <a href="pages/service.html">Services</a>
+            <a href="pages/gallery.html">Gallery</a>
+            <a href="pages/contact.html">Contact Us</a>
+            <a href="pages/inquiry.html">Inquiry</a>
+        </nav>
+
     </header>
+
 
     <!-- Main content -->
     <main>
 
-        <section>
-            <h1>Lily Beauty's Studio</h1>
-            <p > Welcome to Lily Beauty's Studio, your destination for professional and affordable hair care services in Port Elizabeth.</p>
-             <p>We are committed to providing top quality hair care services, while helping every client feel confident and beautiful.</p>
-            <!---insert an image-->
-            <img src="/assets/images/Lily's logo .png" width="30%" height="30%" alt="Lily Beauty's Studio Logo">
+        <!-- Hero Section -->
+        <section class="hero">
+
+            <div class="hero-text">
+
+                <p class="small-heading">BEAUTY • CONFIDENCE • YOU</p>
+
+                <h1>Lily's Beauty Studio</h1>
+
+                <p>
+                    Welcome to Lily's Beauty Studio, your destination for
+                    professional and affordable hair care services in
+                    Port Elizabeth.
+                </p>
+
+                <p>
+                    We are committed to providing quality hair care services
+                    while helping every client feel confident and beautiful.
+                </p>
+
+            </div>
+
+            <div class="hero-image">
+
+                <img src="/assets/images/Model_picture2.jpeg" alt="Lily's Beauty Studio">
+
+            </div>
+
         </section>
-        </main>
-        <br/><hr/>
-    <!-- Footer section -->
+
+
+        <!-- Our Services -->
+        <section class="services">
+
+            <h2>Our Services</h2>
+
+            <div class="service-cards">
+
+                <div class="service-card">
+                    <h3>Braiding</h3>
+                    <p>Neat and beautiful braiding styles.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Hair Wash</h3>
+                    <p>Gentle hair washing and care.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Wig Installation</h3>
+                    <p>Professional wig installation and styling.</p>
+                </div>
+
+            </div>
+
+        </section>
+<!-- Book an Appointment --> 
+<section class="appointment"> 
+
+    <div> 
+
+        <h2>Book Your Appointment</h2> 
+        <p>Clients can make an appointment with Lily Beauty's Studio at a time that is convenient for them.</p> 
+
+        <a href="pages/inquiry.html" class="book-button">Book Appointment</a>
+
+    </div> 
+
+</section>
+
+    </main>
+
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Lily Beauty's Studio. All rights reserved.</p>
- </footer>
+        <p>
+            &copy; 2026 Lily's Beauty Studio. All rights reserved.
+        </p>
+        <h3 class="follow">Follow Us:</h3>
+        <div class="social-media">
+            <!--Facebook-->
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i> @Lily's Beauty Studio
+            </a>
+            <!--Instagram-->
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i> @Lily's Beauty Studio
+            </a>
+            <!--Tiktok-->
+            <a href="https://www.tiktok.com/" target="_blank" aria-label="Tiktok">
+                <i class="fab fa-tiktok"></i> @Lily's Beauty Studio
+            </a>
+        </div>
+    </footer>
+
 </body>
 </html>
