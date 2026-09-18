@@ -107,8 +107,9 @@ Facebook: @Lily Beauty Studio
 --------------------------
 
 <img width="897" height="586" alt="image" src="https://github.com/user-attachments/assets/c0fea68c-aecd-45a4-a1ea-949211552912" />
--------------------------
+
 ## Reference List
+--------------------
 Elevating sales and customer experience in a beauty salon’s new web store. (n.d.). .
 Information, A. and Computer Science E-Issn (2024). Online salon appointment and management system of FOREVER18 hair salon. 5(2), pp.331–350. doi:10.30880/aitcs.2024.05.02.018.
 Jain, G. (2025). Best languages for web development in 2025. [online] Simpalm.com. Available at: https://www.simpalm.com/blog/best-language-for-web-development [Accessed 5 Aug. 2026].
