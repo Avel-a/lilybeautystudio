@@ -12,8 +12,8 @@ Lily Beauty's Studio is a hair salon based in Port Elizabeth. The website was cr
 The website also allows customers to make enquiries and book appointments online.
 ------------------------------------------
 ## *Website Details*
-## **Goals**
 
+## **Goals**
 The goal of the website is to make it easier for customers to get information about the salon, book appointments and provide feedback online. The website can also help the salon manage customer information better.
 ------------------------------------------
 ## *Objectives*
@@ -103,15 +103,15 @@ I added social-media links to the footer of the website.
 The Facebook page is:
 
 Facebook: @Lily Beauty Studio
--------------------------------------------------------------------
+--------------------------------
 ## SiteMap
 <img width="835" height="523" alt="image" src="https://github.com/user-attachments/assets/45b4e1dc-6aa5-4a31-89df-136ea99d2219" />
 
 ## Wireframe
-----------------------------------------------------------------
+--------------------------
 
 <img width="897" height="586" alt="image" src="https://github.com/user-attachments/assets/c0fea68c-aecd-45a4-a1ea-949211552912" />
---------------------------------------------------------------
+-------------------------
 ## **Reference List**
 Elevating sales and customer experience in a beauty salon’s new web store. (n.d.). .
 Information, A. and Computer Science E-Issn (2024). Online salon appointment and management system of FOREVER18 hair salon. 5(2), pp.331–350. doi:10.30880/aitcs.2024.05.02.018.
