@@ -58,8 +58,14 @@ The main improvements I made were:
 
   ## Mobile phone
   <img width="222" height="440" alt="Screenshot 2026-09-18 160513" src="https://github.com/user-attachments/assets/930a294a-2675-43de-94ee-18071481e515" />
+ ## Tablet
+<img width="317" height="395" alt="Screenshot 2026-09-18 160544" src="https://github.com/user-attachments/assets/71e9f79f-cb81-4177-b683-930af92e8576" />
 
+ ## Desktop
+<img width="316" height="443" alt="Screenshot 2026-09-18 160607" src="https://github.com/user-attachments/assets/81e4badd-01a5-4cd5-a4d1-fa22a8c020d9" />
 
+ ## Laptop
+<img width="505" height="322" alt="Screenshot 2026-09-18 160623" src="https://github.com/user-attachments/assets/8e06cc36-747f-491c-b60d-b00cd408c898" />
 
 ## *CSS*
 ---------------------------------------
