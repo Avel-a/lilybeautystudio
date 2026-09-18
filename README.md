@@ -56,6 +56,10 @@ The main improvements I made were:
 * Added media queries to improve the website on different screen sizes.
 * Improved the responsive navigation, images and text.
 
+  ## Mobile phone
+  <img width="222" height="440" alt="Screenshot 2026-09-18 160513" src="https://github.com/user-attachments/assets/930a294a-2675-43de-94ee-18071481e515" />
+
+
 
 ## *CSS*
 ---------------------------------------
