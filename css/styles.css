@@ -614,4 +614,24 @@ footer p {
         flex-direction: column;
         gap: 0.1rem;
     }
+    
+/* Part 3: Services accordion styling */
+.accordion-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #FCEEF2;
+    color: #7A3E52;
+    border: none;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.accordion-button:hover {
+    background-color: #D6336C;
+    color: #FFFFFF;
+}
+
 }
