@@ -55,16 +55,32 @@ if (backToTopButton) {
     });
 }
 
-/* Part 3: Booking form validation */
+/* Part 3: Booking form validation and response */
 const inquiryForm = document.getElementById("inquiry-form");
 
 if (inquiryForm) {
     inquiryForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById("booking-name").value.trim();
         const phone = document.getElementById("phone").value.trim();
-          if (!/^0[0-9]{9}$/.test(phone)) {
-            event.preventDefault();
+        const service = document.getElementById("service").value;
+        const date = document.getElementById("date").value;
+        const time = document.getElementById("time").value;
+        const response = document.getElementById("booking-response");
+
+        if (!/^0[0-9]{9}$/.test(phone)) {
             alert("Please enter a valid cell phone number.");
+            return;
         }
+
+        response.textContent =
+            "Thank you, " + name +
+            ". Your appointment request for " + service +
+            " on " + date + " at " + time +
+            " has been received. Please contact the studio to confirm your appointment.";
+
+        inquiryForm.reset();
     });
 }
 
