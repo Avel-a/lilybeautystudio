@@ -676,3 +676,12 @@ footer p {
 .close-lightbox:hover {
     color: #D6336C;
 }
+
+/* Part 3: Gallery image hover animation */
+.gallery-card img {
+    transition: transform 0.3s ease;
+}
+
+.gallery-card img:hover {
+    transform: scale(1.05);
+}
