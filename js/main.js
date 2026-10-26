@@ -38,3 +38,15 @@ lightbox.addEventListener("click", function (event) {
         lightboxImage.src = "";
     }
 });
+
+/* Part 3: Back-to-top button */
+const backToTopButton = document.getElementById("back-to-top");
+
+if (backToTopButton) {
+    backToTopButton.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}
