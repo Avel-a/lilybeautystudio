@@ -31,15 +31,15 @@
             <h1 >Book Your Appointment</h1>
             <p >Clients can make an appointment with Lily Beauty's Studio at a time that is convenient for them.</p>
             <!-- Booking form -->
-            <form>
+            <form id="inquiry-form">
                 <label for="booking-name">Full Name:</label>
-                <input type="text" id="booking-name" name="booking-name">
+                <input type="text" id="booking-name" name="booking-name" required>
                 <br><br>
                 <label for="phone">Cell Phone Number:</label>
-                <input type="tel" id="phone" name="phone">
+                <input type="tel" id="phone" name="phone" required>
                 <br><br>
                 <label for="service">Select Service:</label>
-                <select id="service" name="service">
+                <select id="service" name="service" required>
                     <option value="">Select a service</option>
                     <option value="hair-wash">Hair Wash - R80</option>
                     <option value="treatment">Treatment - R150</option>
@@ -53,10 +53,10 @@
                 </select>
                 <br><br>
                 <label for="date">Appointment Date:</label>
-                <input type="date" id="date" name="date">
+                <input type="date" id="date" name="date" required>
                 <br><br>
                 <label for="time">Appointment Time:</label>
-                <input type="time" id="time" name="time">
+                <input type="time" id="time" name="time" required>
                 <br><br>
                 <input type="submit" value="Book Appointment">
             </form>
@@ -82,5 +82,7 @@
                 <i class="fab fa-tiktok"></i> @Lily's Beauty Studio
         </div>
     </footer>
+
+    <script src="../js/main.js" defer></script>
 </body>
 </html>
