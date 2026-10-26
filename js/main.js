@@ -107,3 +107,24 @@ if (gallerySearch && searchMessage && galleryCards.length > 0) {
         }
     });
 }
+/* Part 3: Contact form validation */
+const contactForm = document.getElementById("contact-form");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", function (event) {
+        const name = document.getElementById("inquiry-name").value.trim();
+        const email = document.getElementById("inquiry-email").value.trim();
+        const message = document.getElementById("inquiry-message").value.trim();
+
+        if (name === "" || email === "" || message === "") {
+            event.preventDefault();
+            alert("Please complete all fields before submitting.");
+            return;
+        }
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            event.preventDefault();
+            alert("Please enter a valid email address.");
+        }
+    });
+}
