@@ -79,3 +79,31 @@ if (appointmentDate) {
 
     appointmentDate.min = `${year}-${month}-${day}`;
 }
+/* Part 3: Gallery search */
+const gallerySearch = document.getElementById("gallery-search");
+const galleryCards = document.querySelectorAll(".gallery-card");
+const searchMessage = document.getElementById("search-message");
+
+if (gallerySearch && searchMessage && galleryCards.length > 0) {
+    gallerySearch.addEventListener("input", function () {
+        const searchTerm = gallerySearch.value.toLowerCase().trim();
+        let visibleCount = 0;
+
+        galleryCards.forEach(function (card) {
+            const hairstyleName = card.textContent.toLowerCase();
+            const matches = hairstyleName.includes(searchTerm);
+
+            card.hidden = !matches;
+
+            if (matches) {
+                visibleCount++;
+            }
+        });
+
+        if (visibleCount === 0) {
+            searchMessage.textContent = "No hairstyles found. Try another search.";
+        } else {
+            searchMessage.textContent = visibleCount + " hairstyle(s) found.";
+        }
+    });
+}

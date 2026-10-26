@@ -685,3 +685,29 @@ footer p {
 .gallery-card img:hover {
     transform: scale(1.05);
 }
+/* Part 3: Gallery search styling */
+.gallery-search {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.gallery-search label {
+    display: block;
+    margin-bottom: 8px;
+    color: #7A3E52;
+    font-weight: bold;
+}
+
+.gallery-search input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    border: 1px solid #7A3E52;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.gallery-search input:focus {
+    outline: 2px solid #D6336C;
+    border-color: #D6336C;
+}
