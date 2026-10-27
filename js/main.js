@@ -123,24 +123,37 @@ if (gallerySearch && searchMessage && galleryCards.length > 0) {
         }
     });
 }
-/* Part 3: Contact form validation */
+
+/* Part 3: Contact form validation and email process */
 const contactForm = document.getElementById("contact-form");
 
 if (contactForm) {
     contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
         const name = document.getElementById("inquiry-name").value.trim();
         const email = document.getElementById("inquiry-email").value.trim();
         const message = document.getElementById("inquiry-message").value.trim();
 
         if (name === "" || email === "" || message === "") {
-            event.preventDefault();
             alert("Please complete all fields before submitting.");
             return;
         }
 
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            event.preventDefault();
             alert("Please enter a valid email address.");
+            return;
         }
+
+        const subject = encodeURIComponent("Website Inquiry from " + name);
+        const body = encodeURIComponent(
+            "Name: " + name + "\n" +
+            "Email: " + email + "\n\n" +
+            "Inquiry:\n" + message
+        );
+
+        window.location.href =
+            "mailto:info@lilybeautysstudio.com?subject=" +
+            subject + "&body=" + body;
     });
 }
