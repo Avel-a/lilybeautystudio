@@ -30,16 +30,21 @@
     <main>
 
         <section>
-     <!-- Part 3: Gallery search -->
-    <div class="gallery-search">
-        <label for="gallery-search">Search hairstyles:</label>
-        <input
-            type="search"
-            id="gallery-search"
-            placeholder="Search for braids, wigs..."
-        >
-        <p id="search-message" aria-live="polite"></p>
-    </div>
+     
+<!-- Part 3: Image lightbox -->
+<div id="lightbox" class="lightbox" hidden>
+    <button id="close-lightbox" class="close-lightbox"
+            aria-label="Close enlarged image">&times;</button>
+
+    <button id="previous-image" class="lightbox-nav previous-image"
+            aria-label="Previous image">&#10094;</button>
+
+    <img id="lightbox-image" src="" alt="">
+
+    <button id="next-image" class="lightbox-nav next-image"
+            aria-label="Next image">&#10095;</button>
+</div>
+
 
     <div class="gallery">
 

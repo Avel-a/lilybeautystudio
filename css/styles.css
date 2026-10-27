@@ -677,6 +677,56 @@ footer p {
     color: #D6336C;
 }
 
+/* Part 3: Lightbox previous and next buttons */
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #7A3E52;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.previous-image {
+    left: 15px;
+}
+
+.next-image {
+    right: 15px;
+}
+
+.lightbox-nav:hover,
+.lightbox-nav:focus {
+    background-color: #D6336C;
+    outline: 2px solid #FFFFFF;
+}
+
+@media (max-width: 600px) {
+    .lightbox-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .previous-image {
+        left: 8px;
+    }
+
+    .next-image {
+        right: 8px;
+    }
+
+    .lightbox img {
+        max-width: 82%;
+    }
+}
+
 /* Part 3: Gallery image hover animation */
 .gallery-card img {
     transition: transform 0.3s ease;
