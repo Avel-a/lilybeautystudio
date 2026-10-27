@@ -239,4 +239,30 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // Service search
+    const serviceSearch = document.getElementById("service-search");
+    const serviceSearchMessage = document.getElementById("service-search-message");
+    const serviceAccordions = document.querySelectorAll(".service-accordion");
+
+    if (serviceSearch && serviceSearchMessage && serviceAccordions.length > 0) {
+        serviceSearch.addEventListener("input", function () {
+            const searchTerm = serviceSearch.value.toLowerCase().trim();
+            let visibleCount = 0;
+
+            serviceAccordions.forEach(function (section) {
+                const matches = section.textContent.toLowerCase().includes(searchTerm);
+                section.hidden = !matches;
+
+                if (matches) visibleCount++;
+            });
+
+            if (visibleCount === 0) {
+                serviceSearchMessage.textContent = "No services found. Try another search.";
+            } else {
+                serviceSearchMessage.textContent =
+                    visibleCount + " service section(s) found.";
+            }
+        });
+    }
+
 });

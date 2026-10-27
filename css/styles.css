@@ -818,3 +818,40 @@ footer p {
     outline: 2px solid #D6336C;
     outline-offset: 3px;
 }
+
+/* Part 3: Service search styling */
+.service-search {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #FCEEF2;
+    border-radius: 8px;
+}
+
+.service-search label {
+    display: block;
+    margin-bottom: 10px;
+    color: #7A3E52;
+    font-weight: bold;
+}
+
+.service-search input {
+    width: 100%;
+    max-width: 450px;
+    padding: 10px;
+    border: 1px solid #7A3E52;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    color: #333333;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.service-search input:focus {
+    outline: 2px solid #D6336C;
+    outline-offset: 3px;
+}
+
+#service-search-message {
+    margin-top: 10px;
+    color: #7A3E52;
+}
