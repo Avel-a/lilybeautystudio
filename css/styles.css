@@ -711,7 +711,7 @@ footer p {
     .lightbox-nav {
         width: 40px;
         height: 40px;
-        font-size: 1.2rem;
+        font-size: 1.2rem
     }
 
     .previous-image {
@@ -760,4 +760,61 @@ footer p {
 .gallery-search input:focus {
     outline: 2px solid #D6336C;
     border-color: #D6336C;
+}
+
+
+/* Part 3: Service price sorting */
+.service-sorting {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #FCEEF2;
+    border-radius: 8px;
+}
+
+.service-sorting label {
+    display: block;
+    margin-bottom: 10px;
+    color: #7A3E52;
+    font-weight: bold;
+}
+
+.service-sorting select {
+    padding: 10px;
+    border: 1px solid #7A3E52;
+    border-radius: 5px;
+    background-color: white;
+    color: #333333;
+    font-size: 16px;
+    max-width: 100%;
+}
+
+#sort-message {
+    margin-top: 10px;
+    color: #7A3E52;
+}
+
+.sorted-services {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #FCEEF2;
+    border-radius: 8px;
+}
+
+.sorted-services h2 {
+    color: #7A3E52;
+    margin-bottom: 15px;
+}
+
+.sorted-services ul {
+    padding-left: 25px;
+}
+
+.sorted-services li {
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.service-sorting select:focus {
+    outline: 2px solid #D6336C;
+    outline-offset: 3px;
 }

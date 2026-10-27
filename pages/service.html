@@ -28,11 +28,29 @@
      <!-- Main content -->
     <main>
         <!-- Services introduction -->
-        <section>
-            <h1 >Our Services</h1>
-            <p >Lily Beauty's Studio offers a variety of professional hair care services.</p>
-        </section>
-        <br/><hr/>
+<section>
+    <h1>Our Services</h1>
+    <p>Lily Beauty's Studio offers a variety of professional hair care services.</p>
+</section>
+
+<!-- Part 3: Service price sorting -->
+<section class="service-sorting">
+    <label for="price-sort">Sort services by price:</label>
+    <select id="price-sort">
+        <option value="default">Original order</option>
+        <option value="low-high">Price: Low to High</option>
+        <option value="high-low">Price: High to Low</option>
+    </select>
+    <p id="sort-message" aria-live="polite"></p>
+</section>
+
+<!-- Part 3: Sorted service results -->
+<section id="sorted-services" class="sorted-services" hidden>
+    <h2>Services by Price</h2>
+    <ul id="sorted-service-list"></ul>
+</section>
+
+ <br/><hr/>
        
 <!-- Wig Installation and Styling -->
 <section class="service-accordion">
