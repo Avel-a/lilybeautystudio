@@ -291,3 +291,33 @@ if (homeDate) {
     const today = new Date();
     homeDate.textContent = today.toDateString();
 }
+
+/* Contact page tabs */
+const contactTabs = document.querySelectorAll(".contact-tab");
+const contactPanels = document.querySelectorAll(".contact-panel");
+
+contactTabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+        contactTabs.forEach(function (item) {
+            item.classList.remove("active");
+            item.setAttribute("aria-selected", "false");
+            item.setAttribute("tabindex", "-1");
+        });
+
+        contactPanels.forEach(function (panel) {
+            panel.hidden = true;
+        });
+
+        tab.classList.add("active");
+        tab.setAttribute("aria-selected", "true");
+        tab.setAttribute("tabindex", "0");
+
+        const panelId = tab.getAttribute("aria-controls");
+        const activePanel = document.getElementById(panelId);
+
+        if (activePanel) {
+            activePanel.hidden = false;
+        }
+    });
+});
+

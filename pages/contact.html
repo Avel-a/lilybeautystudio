@@ -1,109 +1,252 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Lily Beauty's Studio in Gqeberha to ask questions about hair services, prices and appointments.">
-    <meta name="keywords" content="contact Lily Beauty's Studio, hair appointments, hair service enquiries, salon contact, Gqeberha">
+
+    <meta name="description" content="Contact Lily Beauty's Studio in Gqeberha for hair services, prices and appointments.">
+    <meta name="keywords" content="contact Lily Beauty's Studio, hair appointments, salon enquiries, Gqeberha">
+
     <title>Contact Us - Lily Beauty's Studio</title>
+
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    </head>
-<body>
-  <header> 
-            <a href="../index.html" class="nav-logo">
-        <img src="../assets/images/Lily's logo .png" alt="Lily Beauty's Studio Logo">
-        <span class="brand-name"><span>Lily</span> Beauty's</span>
-    </a>
+</head>
 
-    <nav> 
-        <a href="../index.html">Home</a> 
-        <a href="about.html">About Us</a> 
-        <a href="service.html">Services</a> 
-        <a href="gallery.html">Gallery</a> 
-        <a href="contact.html">Contact Us</a> 
-        <a href="inquiry.html">Inquiry</a> 
-    </nav> 
-    </header> 
+<body>
+    <!-- Header and navigation -->
+    <header>
+        <a href="../index.html" class="nav-logo">
+            <img src="../assets/images/Lily's logo .png" alt="Lily Beauty's Studio Logo">
+            <span class="brand-name"><span>Lily</span> Beauty's</span>
+        </a>
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="service.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html" aria-current="page">Contact Us</a>
+            <a href="inquiry.html">Inquiry</a>
+        </nav>
+    </header>
 
     <!-- Main content -->
-<main>
+    <main class="contact-page">
 
-    <!-- Contact details section -->
-    <section class="contact-details">
-        <h1>Contact Details</h1>
+        <h1 class="contact-page-title">Contact Us</h1>
 
-        <p>Cell phone number: (041)1062192</p>
-        <p>Email: info@lilybeautysstudio.com</p>
-        <p>Business Hours: 9:00 AM - 6:00 PM (Monday to Saturday)</p>
-    </section>
+        <!-- Contact page tabs -->
+        <div class="contact-tabs" role="tablist" aria-label="Contact page sections">
 
-    <!-- Inquiry section -->
-    <section class="contact-inquiry">
-        <h1>Inquiry</h1>
+            <button type="button"
+                    class="contact-tab active"
+                    id="contact-tab-details"
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="contact-panel-details">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                Contact details
+            </button>
 
-        <p>If you have any questions about our services or would like more information, please send us an inquiry.</p>
+            <button type="button"
+                    class="contact-tab"
+                    id="contact-tab-inquiry"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="contact-panel-inquiry"
+                    tabindex="-1">
+                <i class="fa-regular fa-comment" aria-hidden="true"></i>
+                Inquiry
+            </button>
 
-        <form id="contact-form">
-            <label for="inquiry-name">Full Name:</label>
-            <input type="text" id="inquiry-name" name="inquiry-name" required>
+            <button type="button"
+                    class="contact-tab"
+                    id="contact-tab-location"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="contact-panel-location"
+                    tabindex="-1">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                Location
+            </button>
 
-            <br><br>
-            <label for="inquiry-email">Email:</label>
-            <input type="email" id="inquiry-email" name="inquiry-email" required>
+        </div>
 
-            <br><br>
-            <label for="inquiry-message">Your Inquiry:</label>
-            <br>
-            <textarea id="inquiry-message" name="inquiry-message" rows="6" cols="40" required></textarea>
+        <!-- Contact details panel -->
+        <section class="contact-panel"
+                 id="contact-panel-details"
+                 role="tabpanel"
+                 aria-labelledby="contact-tab-details">
 
-            <br><br>
-           <input type="submit" value="Send Inquiry">
-        </form>
-    </section>
+            <div class="contact-cards">
 
-    <!-- Location section -->
-    <section class="location">
-        <h1>Location</h1>
+                <article class="contact-card">
+                    <i class="fa-solid fa-phone contact-card-icon" aria-hidden="true"></i>
+                    <h2>Cell phone</h2>
+                    <p>(041) 106 2192</p>
+                </article>
 
-        <p>Address: 21a Rink Street, Gqeberha, Eastern Cape, 6001, South Africa</p>
-        <p>Here is where you can find us!</p>
+                <article class="contact-card">
+                    <i class="fa-regular fa-envelope contact-card-icon" aria-hidden="true"></i>
+                    <h2>Email</h2>
+                    <p>
+                        <a href="mailto:info@lilybeautysstudio.com">
+                            info@lilybeautysstudio.com
+                        </a>
+                    </p>
+                </article>
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.1686265090775!2d25.60750427513411!3d-33.96250507319089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e7ad25e86f0a833%3A0x56b6ec8baa8abc88!2s21A%20Rink%20St%2C%20Gqeberha%20Central%2C%20Gqeberha%2C%206001!5e0!3m2!1sen!2sza!4v1786458870949!5m2!1sen!2sza"
-                width="600"
-                height="450"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin">
-        </iframe>
-    </section>
+                <article class="contact-card">
+                    <i class="fa-regular fa-clock contact-card-icon" aria-hidden="true"></i>
+                    <h2>Business hours</h2>
+                    <p>9:00 AM – 6:00 PM</p>
+                    <p class="contact-card-note">Monday to Saturday</p>
+                </article>
 
-</main>
-    <!-- Footer section -->
+            </div>
+        </section>
+
+        <!-- Inquiry panel -->
+        <section class="contact-panel"
+                 id="contact-panel-inquiry"
+                 role="tabpanel"
+                 aria-labelledby="contact-tab-inquiry"
+                 hidden>
+
+            <div class="contact-inquiry">
+                <h2>Send an Inquiry</h2>
+
+                <p>If you have questions about our services, please contact us using the form below.</p>
+
+                <form id="contact-form">
+
+                    <div class="contact-form-grid">
+
+                        <div class="contact-field">
+                            <label for="inquiry-name">Full name</label>
+                            <input type="text"
+                                   id="inquiry-name"
+                                   name="inquiry-name"
+                                   autocomplete="name"
+                                   required>
+                        </div>
+
+                        <div class="contact-field">
+                            <label for="inquiry-email">Email</label>
+                            <input type="email"
+                                   id="inquiry-email"
+                                   name="inquiry-email"
+                                   autocomplete="email"
+                                   required>
+                        </div>
+
+                        <div class="contact-field">
+                            <label for="inquiry-phone">Phone</label>
+                            <input type="tel"
+                                   id="inquiry-phone"
+                                   name="inquiry-phone"
+                                   autocomplete="tel"
+                                   required>
+                        </div>
+
+                        <div class="contact-field">
+                            <label for="inquiry-service">Service</label>
+                            <select id="inquiry-service" name="inquiry-service" required>
+                                <option value="">Select a service</option>
+                                <option value="Wig Installation and Styling">Wig Installation &amp; Styling</option>
+                                <option value="Knotless Braids">Knotless Braids</option>
+                                <option value="Boho Braids">Boho Braids</option>
+                                <option value="Fulani Braids">Fulani Braids</option>
+                                <option value="Other">Other enquiry</option>
+                            </select>
+                        </div>
+
+                        <div class="contact-field contact-field-full">
+                            <label for="inquiry-message">Your inquiry</label>
+                            <textarea id="inquiry-message"
+                                      name="inquiry-message"
+                                      rows="5"
+                                      required></textarea>
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="contact-submit">Send inquiry</button>
+
+                    <p id="contact-form-message" role="status" aria-live="polite"></p>
+
+                </form>
+            </div>
+        </section>
+
+        <!-- Location panel -->
+        <section class="contact-panel"
+                 id="contact-panel-location"
+                 role="tabpanel"
+                 aria-labelledby="contact-tab-location"
+                 hidden>
+
+            <div class="contact-location-grid">
+
+                <div class="contact-address">
+                    <h2>Our Location</h2>
+
+                    <p>
+                        21a Rink Street, Gqeberha, Eastern Cape,
+                        6001, South Africa
+                    </p>
+
+                    <p>Visit us for your hair and beauty needs.</p>
+                </div>
+
+                <div class="contact-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.1686265090775!2d25.60750427513411!3d-33.96250507319089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e7ad25e86f0a833%3A0x56b6ec8baa8abc88!2s21A%20Rink%20St%2C%20Gqeberha%20Central%2C%20Gqeberha%2C%206001!5e0!3m2!1sen!2sza!4v1786458870949!5m2!1sen!2sza"
+                        title="Map showing Lily Beauty's Studio location"
+                        loading="lazy"
+                        allowfullscreen
+                        referrerpolicy="strict-origin-when-cross-origin">
+                    </iframe>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
     <footer>
         <div class="digital-clock">
-        <time id="time">00:00:00</time>
-    </div>
+            <time id="time">00:00:00</time>
+        </div>
+
         <p>&copy; 2026 Lily Beauty's Studio. All rights reserved.</p>
 
         <h3 class="follow">Follow Us:</h3>
+
         <div class="social-media">
-            <!--Facebook-->
-            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
-                <i class="fab fa-facebook-f"></i> @Lily's Beauty Studio
+            <a href="https://www.facebook.com/" target="_blank"
+               rel="noopener noreferrer" aria-label="Facebook">
+                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                @Lily's Beauty Studio
             </a>
-            <!--Instagram-->
-            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
-                <i class="fab fa-instagram"></i> @Lily's Beauty Studio
+
+            <a href="https://www.instagram.com/" target="_blank"
+               rel="noopener noreferrer" aria-label="Instagram">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+                @Lily's Beauty Studio
             </a>
-            <!--Tiktok-->
-            <a href="https://www.tiktok.com/" target="_blank" aria-label="Tiktok">
-                <i class="fab fa-tiktok"></i> @Lily's Beauty Studio
+
+            <a href="https://www.tiktok.com/" target="_blank"
+               rel="noopener noreferrer" aria-label="TikTok">
+                <i class="fab fa-tiktok" aria-hidden="true"></i>
+                @Lily's Beauty Studio
             </a>
         </div>
+    </footer>
 
-     <script src="../js/main.js" defer></script>
+    <script src="../js/main.js" defer></script>
 </body>
-</section>
 </html>
