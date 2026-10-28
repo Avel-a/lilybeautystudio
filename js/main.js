@@ -284,4 +284,10 @@ function displayTime() {
 
 displayTime();
 setInterval(displayTime, 1000);
+// Display current date on the home page only
+const homeDate = document.getElementById("home-date");
 
+if (homeDate) {
+    const today = new Date();
+    homeDate.textContent = today.toDateString();
+}

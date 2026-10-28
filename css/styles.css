@@ -901,6 +901,14 @@ footer p {
     margin-top: 10px;
     color: #7A3E52;
 }
-
+/* Home page current date */
+#home-date {
+    margin: 5px 0 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-align: left;
+    font-weight: 500;
+}
 
 
