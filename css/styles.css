@@ -3,7 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap');
 
 /* Basic Reset */
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -89,9 +91,17 @@ nav a:hover {
 /* Main content */
 main {
     max-width: 780px;
+    width: 100%;
     margin: 0 auto;
     padding: 2.5rem 1.5rem 1rem;
     background-color: #FCEEF2;
+}
+
+/* Widen only the page containing the gallery */
+main:has(.gallery) {
+    max-width: 1240px;
+    width: 100%;
+    padding: 2.5rem 20px 1rem;
 }
 
 section {
@@ -146,39 +156,108 @@ section ul li {
     padding-bottom: 0.35rem;
 }
 
-/* Gallery */
+/* Responsive gallery container */
 .gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 20px;
+
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+
+    box-sizing: border-box;
 }
 
+/* Gallery cards */
 .gallery-card {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    height: 100%;
+    padding: 16px;
+
     background-color: #FFFFFF;
     border: 1px solid #E3C9D2;
-    border-radius: 8px;
-    padding: 15px;
-    width: 250px;
+    border-radius: 12px;
     text-align: center;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
+.gallery-card:hover {
+    transform: translateY(-4px);
+    border-color: #D6336C;
+    box-shadow: 0 6px 16px rgba(122, 62, 82, 0.12);
+}
+
+/* Consistent gallery title styling */
 .gallery-card h3 {
-    color: #5C2A3A;
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 1.1rem;
-    height: 90px;
-    margin-bottom: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    min-height: 52px;
+    margin: 0 0 12px;
+
+    color: #5C2A3A;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
 }
 
+/* Consistent gallery image sizing */
 .gallery-card img {
+    display: block;
     width: 100%;
-    height: 250px;
+    height: auto;
+    aspect-ratio: 4 / 5;
     object-fit: cover;
-    border-radius: 5px;
+    flex-shrink: 0;
+
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.gallery-card img:hover {
+    transform: scale(1.02);
+}
+
+/* Gallery search styling */
+.gallery-search {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.gallery-search label {
+    display: block;
+    margin-bottom: 8px;
+    color: #7A3E52;
+    font-weight: bold;
+}
+
+.gallery-search input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    border: 1px solid #7A3E52;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.gallery-search input:focus {
+    outline: 2px solid #D6336C;
+    border-color: #D6336C;
 }
 
 /* General forms */
@@ -348,7 +427,7 @@ iframe {
     color: #FFFFFF;
 }
 
-/* Our services */
+/* Homepage services section */
 .services {
     max-width: 1100px;
     margin: 0 auto;
@@ -376,8 +455,8 @@ iframe {
     border: 1px solid #E3C9D2;
     border-radius: 8px;
     padding: 20px;
-    box-sizing: border-box;
     width: 100%;
+    min-width: 0;
     height: 100%;
     text-align: center;
 }
@@ -589,42 +668,6 @@ footer p {
     outline: 2px solid #FFFFFF;
 }
 
-/* Part 3: Gallery image hover animation */
-.gallery-card img {
-    transition: transform 0.3s ease;
-}
-
-.gallery-card img:hover {
-    transform: scale(1.05);
-}
-
-/* Part 3: Gallery search styling */
-.gallery-search {
-    margin: 20px 0;
-    text-align: center;
-}
-
-.gallery-search label {
-    display: block;
-    margin-bottom: 8px;
-    color: #7A3E52;
-    font-weight: bold;
-}
-
-.gallery-search input {
-    width: 100%;
-    max-width: 400px;
-    padding: 12px;
-    border: 1px solid #7A3E52;
-    border-radius: 6px;
-    font-size: 1rem;
-}
-
-.gallery-search input:focus {
-    outline: 2px solid #D6336C;
-    border-color: #D6336C;
-}
-
 /* Part 3: Service price sorting */
 .service-sorting {
     margin: 20px 0;
@@ -705,7 +748,6 @@ footer p {
     background-color: #FFFFFF;
     color: #333333;
     font-size: 16px;
-    box-sizing: border-box;
 }
 
 .service-search input:focus {
@@ -880,9 +922,7 @@ footer p {
     margin-top: 5px;
 }
 
-
 /* Compact Inquiry Form */
-
 #contact-panel-inquiry {
     padding: 20px 26px;
     min-height: 0;
@@ -986,7 +1026,6 @@ footer p {
     overflow-wrap: anywhere;
 }
 
-
 /* Location and map */
 .contact-location-grid {
     display: grid;
@@ -1031,7 +1070,29 @@ footer p {
     border-radius: 12px;
 }
 
-/* Tablet layout */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Tablet: 2 gallery cards per row */
+@media (min-width: 600px) and (max-width: 991px) {
+    main:has(.gallery) {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Tablet and mobile layout for other sections */
 @media (max-width: 768px) {
     .service-cards {
         grid-template-columns: 1fr;
@@ -1086,6 +1147,23 @@ footer p {
     }
 }
 
+/* Phone: 1 gallery card per row */
+@media (max-width: 599px) {
+    main:has(.gallery) {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    .gallery {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .gallery-card h3 {
+        min-height: 0;
+    }
+}
+
 /* Phone layout */
 @media (max-width: 480px) {
     header {
@@ -1113,6 +1191,11 @@ footer p {
 
     main {
         padding: 1.5rem 1rem 1rem;
+    }
+
+    /* Preserve the gallery page's wider layout on phones */
+    main:has(.gallery) {
+        padding: 1.5rem 12px 1rem;
     }
 
     form {
@@ -1208,5 +1291,18 @@ footer p {
     .contact-map,
     .contact-map iframe {
         min-height: 260px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .gallery-card,
+    .gallery-card img {
+        transition: none;
+    }
+
+    .gallery-card:hover,
+    .gallery-card img:hover {
+        transform: none;
     }
 }
