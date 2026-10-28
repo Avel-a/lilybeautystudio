@@ -1306,3 +1306,220 @@ footer p {
         transform: none;
     }
 }
+
+/* Part 3: Compact Services page redesign */
+main:has(.service-accordion) {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 16px;
+}
+
+/* Compact, centered introduction */
+main:has(.service-accordion) > section:first-child {
+    padding: 12px 0;
+    text-align: center;
+}
+
+main:has(.service-accordion) > section:first-child h1 {
+    margin-bottom: 12px;
+}
+
+main:has(.service-accordion) > section:first-child p {
+    margin: 0 auto;
+}
+
+/* Search and sorting controls */
+main:has(.service-accordion) .service-search,
+main:has(.service-accordion) .service-sorting {
+    margin: 0;
+    padding: 0;
+    background: #FCEEF2;
+    border-radius: 0;
+}
+
+main:has(.service-accordion) .service-search label,
+main:has(.service-accordion) .service-sorting label {
+    display: block;
+    margin-bottom: 4px;
+    color: #5C2238;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+main:has(.service-accordion) .service-search input,
+main:has(.service-accordion) .service-sorting select {
+    width: 100%;
+    max-width: none;
+    height: 40px;
+    padding: 8px 10px;
+    border: 1px solid #D9B8C4;
+    border-radius: 5px;
+    background: #FFFFFF;
+    color: #333333;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+}
+
+main:has(.service-accordion) .service-search {
+    flex: 65 1 250px;
+    min-width: 0;
+}
+
+main:has(.service-accordion) .service-sorting {
+    flex: 35 1 160px;
+    min-width: 0;
+}
+
+/* Sticky search and sorting bar */
+main:has(.service-accordion) .service-controls {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    gap: 12px;
+    padding: 12px 0;
+    background: #FCEEF2;
+}
+
+/* Search and sorting feedback */
+main:has(.service-accordion) #service-search-message,
+main:has(.service-accordion) #sort-message {
+    margin: 6px 0 0;
+    color: #5C2238;
+    font-size: 13px;
+}
+
+/* Compact accordion groups */
+main:has(.service-accordion) .service-accordion {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #E3C9D2;
+}
+
+main:has(.service-accordion) .accordion-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 56px;
+    padding: 12px 20px;
+    background: #F8DDE6;
+    color: #5C2238;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+main:has(.service-accordion) .service-accordion:nth-of-type(2) .accordion-button {
+    background: #B92D60;
+    color: #FFFFFF;
+}
+
+main:has(.service-accordion) .accordion-button:hover,
+main:has(.service-accordion) .accordion-button[aria-expanded="true"] {
+    background: #7A3E52;
+    color: #FFFFFF;
+}
+
+/* Arrow indicator */
+main:has(.service-accordion) .accordion-button::after {
+    content: "⌄";
+    flex-shrink: 0;
+    font-size: 20px;
+    transition: transform 0.25s ease;
+}
+
+main:has(.service-accordion) .accordion-button[aria-expanded="true"]::after {
+    transform: rotate(180deg);
+}
+
+/* Service content and price rows */
+main:has(.service-accordion) .accordion-content {
+    padding: 12px 20px;
+    background: #FFFFFF;
+}
+
+main:has(.service-accordion) .accordion-content[hidden] {
+    display: none;
+}
+
+main:has(.service-accordion) .accordion-content p {
+    margin-bottom: 8px;
+}
+
+main:has(.service-accordion) .accordion-content ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+main:has(.service-accordion) .accordion-content li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    min-height: 40px;
+    margin: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #F0DDE4;
+}
+
+main:has(.service-accordion) .accordion-content li:last-child {
+    border-bottom: none;
+}
+
+/* Sorted results */
+main:has(.service-accordion) .sorted-services {
+    margin: 12px 0;
+    padding: 16px;
+    background: #FFFFFF;
+    border: 1px solid #E3C9D2;
+    border-radius: 6px;
+}
+
+main:has(.service-accordion) .sorted-services ul {
+    padding: 0;
+    list-style: none;
+}
+
+main:has(.service-accordion) .sorted-services li {
+    display: block;
+    margin: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #F0DDE4;
+}
+
+@media (max-width: 480px) {
+    main:has(.service-accordion) {
+        padding: 16px 12px;
+    }
+
+    main:has(.service-accordion) .service-controls {
+        gap: 8px;
+    }
+
+    main:has(.service-accordion) .service-search,
+    main:has(.service-accordion) .service-sorting {
+        flex: 1 1 100%;
+    }
+
+    main:has(.service-accordion) .accordion-button {
+        padding: 12px;
+    }
+
+    main:has(.service-accordion) .accordion-content {
+        padding: 10px 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    main:has(.service-accordion) .accordion-button,
+    main:has(.service-accordion) .accordion-button::after {
+        transition: none;
+    }
+}
