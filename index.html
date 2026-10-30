@@ -1,13 +1,33 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="description" content="Lily Beauty's Studio offers braiding, wig installation, hairstyling and hair treatments in Gqeberha, South Africa.">
-    <meta name="keywords" content="Lily Beauty's Studio, hair salon, braids, knotless braids, boho braids, Fulani braids, wig installation, hair treatments, Gqeberha">  
+
+    <meta name="keywords" content="Lily Beauty's Studio, hair salon, braids, knotless braids, boho braids, Fulani braids, wig installation, hair treatments, Gqeberha">
+
     <title>Lily's Beauty Studio</title>
+
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <!-- Part 3: Interactive home page image styling -->
+    <style>
+        .hero-image {
+            overflow: hidden;
+        }
+
+        .interactive-image {
+            transition: transform 0.4s ease;
+        }
+
+        .interactive-image:hover {
+            transform: scale(1.08);
+        }
+    </style>
 </head>
 
 <body>
@@ -19,7 +39,9 @@
         <a href="../index.html" class="nav-logo">
             <img src="/assets/images/Lily's logo .png"
                  alt="Lily's Beauty Studio Logo">
+
             <span class="brand-name">Lily's Beauty Studio</span>
+
             <p id="home-date"></p>
         </a>
 
@@ -61,9 +83,12 @@
 
             </div>
 
+            <!-- Interactive home page image -->
             <div class="hero-image">
 
-                <img src="/assets/images/Model_picture2.jpeg" alt="Lily's Beauty Studio">
+                <img src="/assets/images/Model_picture2.jpeg"
+                     alt="Lily's Beauty Studio"
+                     class="interactive-image">
 
             </div>
 
@@ -95,52 +120,72 @@
             </div>
 
         </section>
-<!-- Book an Appointment --> 
-<section class="appointment"> 
 
-    <div> 
 
-        <h2>Book Your Appointment</h2> 
-        <p>Clients can make an appointment with Lily Beauty's Studio at a time that is convenient for them.</p> 
+        <!-- Book an Appointment -->
+        <section class="appointment">
 
-        <a href="pages/inquiry.html" class="book-button">Book Appointment</a>
+            <div>
 
-    </div> 
+                <h2>Book Your Appointment</h2>
 
-</section>
+                <p>
+                    Clients can make an appointment with Lily Beauty's Studio
+                    at a time that is convenient for them.
+                </p>
+
+                <a href="pages/inquiry.html" class="book-button">
+                    Book Appointment
+                </a>
+
+            </div>
+
+        </section>
 
     </main>
 
 
     <!-- Footer -->
     <footer>
+
         <div class="digital-clock">
-        <time id="time">00:00:00</time>
-    </div>
+            <time id="time">00:00:00</time>
+        </div>
+
         <p>
             &copy; 2026 Lily's Beauty Studio. All rights reserved.
         </p>
+
         <h3 class="follow">Follow Us:</h3>
+
         <div class="social-media">
-            <!--Facebook-->
+
+            <!-- Facebook -->
             <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
                 <i class="fab fa-facebook-f"></i> @Lily's Beauty Studio
             </a>
-            <!--Instagram-->
+
+            <!-- Instagram -->
             <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
                 <i class="fab fa-instagram"></i> @Lily's Beauty Studio
             </a>
-            <!--Tiktok-->
-            <a href="https://www.tiktok.com/" target="_blank" aria-label="Tiktok">
+
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok">
                 <i class="fab fa-tiktok"></i> @Lily's Beauty Studio
             </a>
+
         </div>
+
     </footer>
-    
-<!-- Part 3: Back-to-top button -->
-<button id="back-to-top" title="Back to top" aria-label="Back to top">
-    ↑
-</button>
-<script src="js/main.js" defer></script>
+
+
+    <!-- Part 3: Back-to-top button -->
+    <button id="back-to-top" title="Back to top" aria-label="Back to top">
+        ↑
+    </button>
+
+    <script src="js/main.js" defer></script>
+
 </body>
 </html>
