@@ -9,10 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
         element.style.color = isError ? "red" : "green";
     }
 
+
     // Check South African phone numbers
     function isValidPhone(phone) {
         return /^0[0-9]{9}$/.test(phone);
     }
+
 
     // Check email addresses
     function isValidEmail(email) {
@@ -20,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // Accordion
+    // Services accordion
     const accordionButtons = document.querySelectorAll(".accordion-button");
 
     accordionButtons.forEach(function (button) {
@@ -131,7 +133,6 @@ document.addEventListener("DOMContentLoaded", function () {
             appointmentDate.min = `${year}-${month}-${day}`;
         }
 
-        // Let JavaScript handle form validation
         inquiryForm.noValidate = true;
 
         inquiryForm.addEventListener("submit", function (event) {
@@ -222,7 +223,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const contactResponse = document.getElementById("contact-form-message");
 
-        // Let JavaScript handle form validation
         contactForm.noValidate = true;
 
         contactForm.addEventListener("submit", function (event) {
@@ -370,34 +370,43 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
 
-            if (visibleCount === 0) {
-                serviceSearchMessage.textContent = "No services found. Try another search.";
-            } else {
-                serviceSearchMessage.textContent =
-                    visibleCount + " service section(s) found.";
-            }
+            serviceSearchMessage.textContent = visibleCount === 0
+                ? "No services found. Try another search."
+                : visibleCount + " service section(s) found.";
         });
     }
 
 
-    // Live digital clock
-    function displayTime() {
+    // Live clocks and automatic copyright year
+    function updateTimeAndYear() {
         const now = new Date();
 
         const hours = String(now.getHours()).padStart(2, "0");
         const minutes = String(now.getMinutes()).padStart(2, "0");
         const seconds = String(now.getSeconds()).padStart(2, "0");
 
+        const currentTime = `${hours}:${minutes}:${seconds}`;
+
+        // Update the existing digital clock
         const timeElement = document.getElementById("time");
 
-        // Do not overwrite the booking time input
         if (timeElement && timeElement.tagName !== "INPUT") {
-            timeElement.textContent = `${hours}:${minutes}:${seconds}`;
+            timeElement.textContent = currentTime;
         }
+
+        // Update the footer clock
+        document.querySelectorAll("[data-clock]").forEach(function (element) {
+            element.textContent = currentTime;
+        });
+
+        // Update the copyright year
+        document.querySelectorAll("[data-year]").forEach(function (element) {
+            element.textContent = now.getFullYear();
+        });
     }
 
-    displayTime();
-    setInterval(displayTime, 1000);
+    updateTimeAndYear();
+    setInterval(updateTimeAndYear, 1000);
 
 
     // Display current date on the home page
