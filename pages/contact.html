@@ -32,65 +32,31 @@
         </nav>
     </header>
 
-    <!-- Main content -->
-    <main class="contact-page">
+    
+<main class="contact-page">
 
-        <h1 class="contact-page-title">Contact Us</h1>
+    <h1 class="contact-page-title">Contact Us</h1>
 
-        <!-- Contact page tabs -->
-        <div class="contact-tabs" role="tablist" aria-label="Contact page sections">
+    <!-- Contact details and Inquiry form -->
+    <div class="contact-main-grid">
 
-            <button type="button"
-                    class="contact-tab active"
-                    id="contact-tab-details"
-                    role="tab"
-                    aria-selected="true"
-                    aria-controls="contact-panel-details">
-                <i class="fa-solid fa-phone" aria-hidden="true"></i>
-                Contact details
-            </button>
-
-            <button type="button"
-                    class="contact-tab"
-                    id="contact-tab-inquiry"
-                    role="tab"
-                    aria-selected="false"
-                    aria-controls="contact-panel-inquiry"
-                    tabindex="-1">
-                <i class="fa-regular fa-comment" aria-hidden="true"></i>
-                Inquiry
-            </button>
-
-            <button type="button"
-                    class="contact-tab"
-                    id="contact-tab-location"
-                    role="tab"
-                    aria-selected="false"
-                    aria-controls="contact-panel-location"
-                    tabindex="-1">
-                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                Location
-            </button>
-
-        </div>
-
-        <!-- Contact details panel -->
-        <section class="contact-panel"
-                 id="contact-panel-details"
-                 role="tabpanel"
-                 aria-labelledby="contact-tab-details">
+        <!-- Contact Details -->
+        <section class="contact-info">
+            <h2>Contact Details</h2>
 
             <div class="contact-cards">
 
                 <article class="contact-card">
-                    <i class="fa-solid fa-phone contact-card-icon" aria-hidden="true"></i>
-                    <h2>Cell phone</h2>
+                    <i class="fa-solid fa-phone contact-card-icon"
+                       aria-hidden="true"></i>
+                    <h3>Cell phone</h3>
                     <p>(041) 106 2192</p>
                 </article>
 
                 <article class="contact-card">
-                    <i class="fa-regular fa-envelope contact-card-icon" aria-hidden="true"></i>
-                    <h2>Email</h2>
+                    <i class="fa-regular fa-envelope contact-card-icon"
+                       aria-hidden="true"></i>
+                    <h3>Email</h3>
                     <p>
                         <a href="mailto:info@lilybeautysstudio.com">
                             info@lilybeautysstudio.com
@@ -99,122 +65,105 @@
                 </article>
 
                 <article class="contact-card">
-                    <i class="fa-regular fa-clock contact-card-icon" aria-hidden="true"></i>
-                    <h2>Business hours</h2>
+                    <i class="fa-regular fa-clock contact-card-icon"
+                       aria-hidden="true"></i>
+                    <h3>Business hours</h3>
                     <p>9:00 AM – 6:00 PM</p>
-                    <p class="contact-card-note">Monday to Saturday</p>
+                    <p>Monday to Saturday</p>
                 </article>
 
             </div>
         </section>
 
-        <!-- Inquiry panel -->
-        <section class="contact-panel"
-                 id="contact-panel-inquiry"
-                 role="tabpanel"
-                 aria-labelledby="contact-tab-inquiry"
-                 hidden>
+        <!-- Inquiry Form -->
+        <section class="contact-inquiry">
+            <h2>Send an Inquiry</h2>
 
-            <div class="contact-inquiry">
-                <h2>Send an Inquiry</h2>
+            <p>
+                If you have questions about our services,
+                please contact us using the form below.
+            </p>
 
-                <p>If you have questions about our services, please contact us using the form below.</p>
+            <form id="contact-form">
 
-                <form id="contact-form">
+                <div class="contact-form-grid">
 
-                    <div class="contact-form-grid">
-
-                        <div class="contact-field">
-                            <label for="inquiry-name">Full name</label>
-                            <input type="text"
-                                   id="inquiry-name"
-                                   name="inquiry-name"
-                                   autocomplete="name"
-                                   required>
-                        </div>
-
-                        <div class="contact-field">
-                            <label for="inquiry-email">Email</label>
-                            <input type="email"
-                                   id="inquiry-email"
-                                   name="inquiry-email"
-                                   autocomplete="email"
-                                   required>
-                        </div>
-
-                        <div class="contact-field">
-                            <label for="inquiry-phone">Phone</label>
-                            <input type="tel"
-                                   id="inquiry-phone"
-                                   name="inquiry-phone"
-                                   autocomplete="tel"
-                                   required>
-                        </div>
-
-                        <div class="contact-field">
-                            <label for="inquiry-service">Service</label>
-                            <select id="inquiry-service" name="inquiry-service" required>
-                                <option value="">Select a service</option>
-                                <option value="Wig Installation and Styling">Wig Installation &amp; Styling</option>
-                                <option value="Knotless Braids">Knotless Braids</option>
-                                <option value="Boho Braids">Boho Braids</option>
-                                <option value="Fulani Braids">Fulani Braids</option>
-                                <option value="Other">Other enquiry</option>
-                            </select>
-                        </div>
-
-                        <div class="contact-field contact-field-full">
-                            <label for="inquiry-message">Your inquiry</label>
-                            <textarea id="inquiry-message"
-                                      name="inquiry-message"
-                                      rows="5"
-                                      required></textarea>
-                        </div>
-
+                    <div class="contact-field">
+                        <label for="inquiry-name">Full name</label>
+                        <input type="text" id="inquiry-name"
+                               name="inquiry-name"
+                               autocomplete="name" required>
                     </div>
 
-                    <button type="submit" class="contact-submit">Send inquiry</button>
+                    <div class="contact-field">
+                        <label for="inquiry-email">Email</label>
+                        <input type="email" id="inquiry-email"
+                               name="inquiry-email"
+                               autocomplete="email" required>
+                    </div>
 
-                    <p id="contact-form-message" role="status" aria-live="polite"></p>
+                    <div class="contact-field">
+                        <label for="inquiry-phone">Phone</label>
+                        <input type="tel" id="inquiry-phone"
+                               name="inquiry-phone"
+                               autocomplete="tel" required>
+                    </div>
 
-                </form>
-            </div>
-        </section>
+                    <div class="contact-field">
+                        <label for="inquiry-service">Service</label>
+                        <select id="inquiry-service"
+                                name="inquiry-service" required>
+                            <option value="">Select a service</option>
+                            <option value="Wig Installation and Styling">Wig Installation &amp; Styling</option>
+                            <option value="Knotless Braids">Knotless Braids</option>
+                            <option value="Boho Braids">Boho Braids</option>
+                            <option value="Fulani Braids">Fulani Braids</option>
+                            <option value="Other">Other enquiry</option>
+                        </select>
+                    </div>
 
-        <!-- Location panel -->
-        <section class="contact-panel"
-                 id="contact-panel-location"
-                 role="tabpanel"
-                 aria-labelledby="contact-tab-location"
-                 hidden>
+                    <div class="contact-field contact-field-full">
+                        <label for="inquiry-message">Your inquiry</label>
+                        <textarea id="inquiry-message"
+                                  name="inquiry-message"
+                                  rows="5" required></textarea>
+                    </div>
 
-            <div class="contact-location-grid">
-
-                <div class="contact-address">
-                    <h2>Our Location</h2>
-
-                    <p>
-                        21a Rink Street, Gqeberha, Eastern Cape,
-                        6001, South Africa
-                    </p>
-
-                    <p>Visit us for your hair and beauty needs.</p>
                 </div>
 
-                <div class="contact-map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.1686265090775!2d25.60750427513411!3d-33.96250507319089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e7ad25e86f0a833%3A0x56b6ec8baa8abc88!2s21A%20Rink%20St%2C%20Gqeberha%20Central%2C%20Gqeberha%2C%206001!5e0!3m2!1sen!2sza!4v1786458870949!5m2!1sen!2sza"
-                        title="Map showing Lily Beauty's Studio location"
-                        loading="lazy"
-                        allowfullscreen
-                        referrerpolicy="strict-origin-when-cross-origin">
-                    </iframe>
-                </div>
+                <button type="submit" class="contact-submit">
+                    Send inquiry
+                </button>
 
-            </div>
+                <p id="contact-form-message"
+                   role="status" aria-live="polite"></p>
+
+            </form>
         </section>
 
-    </main>
+    </div>
+
+    <!-- Location below both sections -->
+    <section class="contact-location">
+        <h2>Our Location</h2>
+
+        <p>
+            21a Rink Street, Gqeberha, Eastern Cape,
+            6001, South Africa
+        </p>
+
+        <div class="contact-map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.1686265090775!2d25.60750427513411!3d-33.96250507319089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e7ad25e86f0a833%3A0x56b6ec8baa8abc88!2s21A%20Rink%20St%2C%20Gqeberha%20Central%2C%20Gqeberha%2C%206001!5e0!3m2!1sen!2sza!4v1786458870949!5m2!1sen!2sza"
+                title="Map showing Lily Beauty's Studio location"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>
+        </div>
+    </section>
+
+</main>
 
     <!-- Footer -->
     <footer>

@@ -1,18 +1,41 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
+    // Display form messages
+    function showFormMessage(element, message, isError) {
+        if (!element) return;
+
+        element.textContent = message;
+        element.style.color = isError ? "red" : "green";
+    }
+
+    // Check South African phone numbers
+    function isValidPhone(phone) {
+        return /^0[0-9]{9}$/.test(phone);
+    }
+
+    // Check email addresses
+    function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+    }
+
+
     // Accordion
     const accordionButtons = document.querySelectorAll(".accordion-button");
 
     accordionButtons.forEach(function (button) {
         button.addEventListener("click", function () {
             const content = button.nextElementSibling;
+
+            if (!content) return;
+
             const isExpanded = button.getAttribute("aria-expanded") === "true";
 
             button.setAttribute("aria-expanded", String(!isExpanded));
             content.hidden = isExpanded;
         });
     });
+
 
     // Gallery lightbox
     const galleryImages = document.querySelectorAll(".gallery-card img");
@@ -23,12 +46,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const nextImage = document.getElementById("next-image");
 
     if (lightbox && lightboxImage && closeLightbox && previousImage && nextImage) {
+
         let currentImageIndex = 0;
 
         function showImage(index) {
             if (galleryImages.length === 0) return;
 
             currentImageIndex = (index + galleryImages.length) % galleryImages.length;
+
             lightboxImage.src = galleryImages[currentImageIndex].src;
             lightboxImage.alt = galleryImages[currentImageIndex].alt;
         }
@@ -56,7 +81,9 @@ document.addEventListener("DOMContentLoaded", function () {
         closeLightbox.addEventListener("click", closeImageLightbox);
 
         lightbox.addEventListener("click", function (event) {
-            if (event.target === lightbox) closeImageLightbox();
+            if (event.target === lightbox) {
+                closeImageLightbox();
+            }
         });
 
         document.addEventListener("keydown", function (event) {
@@ -72,28 +99,40 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+
     // Back-to-top button
     const backToTopButton = document.getElementById("back-to-top");
 
     if (backToTopButton) {
         backToTopButton.addEventListener("click", function () {
-            window.scrollTo({ top: 0, behavior: "smooth" });
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         });
     }
 
-    // Booking form validation and response
+
+    // Booking form validation
     const inquiryForm = document.getElementById("inquiry-form");
 
     if (inquiryForm) {
-        const appointmentDate = document.getElementById("date");
 
+        const appointmentDate = document.getElementById("date");
+        const bookingResponse = document.getElementById("booking-response");
+
+        // Set today's date as the earliest booking date
         if (appointmentDate) {
             const today = new Date();
             const year = today.getFullYear();
             const month = String(today.getMonth() + 1).padStart(2, "0");
             const day = String(today.getDate()).padStart(2, "0");
+
             appointmentDate.min = `${year}-${month}-${day}`;
         }
+
+        // Let JavaScript handle form validation
+        inquiryForm.noValidate = true;
 
         inquiryForm.addEventListener("submit", function (event) {
             event.preventDefault();
@@ -103,26 +142,50 @@ document.addEventListener("DOMContentLoaded", function () {
             const service = document.getElementById("service").value;
             const date = document.getElementById("date").value;
             const time = document.getElementById("time").value;
-            const response = document.getElementById("booking-response");
 
-            if (!/^0[0-9]{9}$/.test(phone)) {
-                alert("Please enter a valid 10-digit cell phone number starting with 0.");
+            // Check that all fields are completed
+            if (!name || !phone || !service || !date || !time) {
+                showFormMessage(
+                    bookingResponse,
+                    "Please complete all booking fields.",
+                    true
+                );
                 return;
             }
 
-            if (!name || !service || !date || !time || !response) {
-                alert("Please complete all booking fields.");
+            // Check phone number
+            if (!isValidPhone(phone)) {
+                showFormMessage(
+                    bookingResponse,
+                    "Please enter a valid 10-digit cell phone number starting with 0.",
+                    true
+                );
                 return;
             }
 
-            response.textContent =
+            // Check that the selected date is not in the past
+            if (appointmentDate && date < appointmentDate.min) {
+                showFormMessage(
+                    bookingResponse,
+                    "Please select today or a future date.",
+                    true
+                );
+                return;
+            }
+
+            // Display successful booking message
+            showFormMessage(
+                bookingResponse,
                 "Thank you, " + name + ". Your appointment request for " +
                 service + " on " + date + " at " + time +
-                " has been received. Please contact the studio to confirm your appointment.";
+                " has been received. Please contact the studio to confirm your appointment.",
+                false
+            );
 
             inquiryForm.reset();
         });
     }
+
 
     // Gallery search
     const gallerySearch = document.getElementById("gallery-search");
@@ -130,15 +193,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchMessage = document.getElementById("search-message");
 
     if (gallerySearch && searchMessage && galleryCards.length > 0) {
+
         gallerySearch.addEventListener("input", function () {
             const searchTerm = gallerySearch.value.toLowerCase().trim();
             let visibleCount = 0;
 
             galleryCards.forEach(function (card) {
                 const matches = card.textContent.toLowerCase().includes(searchTerm);
+
                 card.hidden = !matches;
 
-                if (matches) visibleCount++;
+                if (matches) {
+                    visibleCount++;
+                }
             });
 
             searchMessage.textContent = visibleCount === 0
@@ -147,32 +214,71 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Contact form validation and email process
+
+    // Contact form validation
     const contactForm = document.getElementById("contact-form");
 
     if (contactForm) {
+
+        const contactResponse = document.getElementById("contact-form-message");
+
+        // Let JavaScript handle form validation
+        contactForm.noValidate = true;
+
         contactForm.addEventListener("submit", function (event) {
             event.preventDefault();
 
             const name = document.getElementById("inquiry-name").value.trim();
             const email = document.getElementById("inquiry-email").value.trim();
+            const phone = document.getElementById("inquiry-phone").value.trim();
+            const service = document.getElementById("inquiry-service").value;
             const message = document.getElementById("inquiry-message").value.trim();
 
-            if (!name || !email || !message) {
-                alert("Please complete all fields before submitting.");
+            // Check that all fields are completed
+            if (!name || !email || !phone || !service || !message) {
+                showFormMessage(
+                    contactResponse,
+                    "Please complete all fields before submitting.",
+                    true
+                );
                 return;
             }
 
-            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                alert("Please enter a valid email address.");
+            // Check email address
+            if (!isValidEmail(email)) {
+                showFormMessage(
+                    contactResponse,
+                    "Please enter a valid email address.",
+                    true
+                );
                 return;
             }
 
+            // Check phone number
+            if (!isValidPhone(phone)) {
+                showFormMessage(
+                    contactResponse,
+                    "Please enter a valid 10-digit cell phone number starting with 0.",
+                    true
+                );
+                return;
+            }
+
+            // Prepare the email
             const subject = encodeURIComponent("Website Inquiry from " + name);
+
             const body = encodeURIComponent(
                 "Name: " + name + "\n" +
-                "Email: " + email + "\n\n" +
+                "Email: " + email + "\n" +
+                "Phone: " + phone + "\n" +
+                "Service: " + service + "\n\n" +
                 "Inquiry:\n" + message
+            );
+
+            showFormMessage(
+                contactResponse,
+                "Your details are valid. Opening your email application...",
+                false
             );
 
             window.location.href =
@@ -181,6 +287,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+
     // Service price sorting
     const priceSort = document.getElementById("price-sort");
     const sortedServices = document.getElementById("sorted-services");
@@ -188,6 +295,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const sortMessage = document.getElementById("sort-message");
 
     if (priceSort && sortedServices && sortedServiceList && sortMessage) {
+
         const services = [
             { name: "Hair Wash", price: 80 },
             { name: "Blow Out", price: 100 },
@@ -230,6 +338,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             sortedList.forEach(function (service) {
                 const item = document.createElement("li");
+
                 item.textContent = service.name + " - R" + service.price;
                 sortedServiceList.appendChild(item);
             });
@@ -239,21 +348,26 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+
     // Service search
     const serviceSearch = document.getElementById("service-search");
     const serviceSearchMessage = document.getElementById("service-search-message");
     const serviceAccordions = document.querySelectorAll(".service-accordion");
 
     if (serviceSearch && serviceSearchMessage && serviceAccordions.length > 0) {
+
         serviceSearch.addEventListener("input", function () {
             const searchTerm = serviceSearch.value.toLowerCase().trim();
             let visibleCount = 0;
 
             serviceAccordions.forEach(function (section) {
                 const matches = section.textContent.toLowerCase().includes(searchTerm);
+
                 section.hidden = !matches;
 
-                if (matches) visibleCount++;
+                if (matches) {
+                    visibleCount++;
+                }
             });
 
             if (visibleCount === 0) {
@@ -265,59 +379,33 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-});
 
     // Live digital clock
-function displayTime() {
-    const now = new Date();
+    function displayTime() {
+        const now = new Date();
 
-    let hours = String(now.getHours()).padStart(2, "0");
-    let minutes = String(now.getMinutes()).padStart(2, "0");
-    let seconds = String(now.getSeconds()).padStart(2, "0");
+        const hours = String(now.getHours()).padStart(2, "0");
+        const minutes = String(now.getMinutes()).padStart(2, "0");
+        const seconds = String(now.getSeconds()).padStart(2, "0");
 
-    const timeElement = document.getElementById("time");
+        const timeElement = document.getElementById("time");
 
-    if (timeElement) {
-        timeElement.textContent = `${hours}:${minutes}:${seconds}`;
-    }
-}
-
-displayTime();
-setInterval(displayTime, 1000);
-// Display current date on the home page only
-const homeDate = document.getElementById("home-date");
-
-if (homeDate) {
-    const today = new Date();
-    homeDate.textContent = today.toDateString();
-}
-
-/* Contact page tabs */
-const contactTabs = document.querySelectorAll(".contact-tab");
-const contactPanels = document.querySelectorAll(".contact-panel");
-
-contactTabs.forEach(function (tab) {
-    tab.addEventListener("click", function () {
-        contactTabs.forEach(function (item) {
-            item.classList.remove("active");
-            item.setAttribute("aria-selected", "false");
-            item.setAttribute("tabindex", "-1");
-        });
-
-        contactPanels.forEach(function (panel) {
-            panel.hidden = true;
-        });
-
-        tab.classList.add("active");
-        tab.setAttribute("aria-selected", "true");
-        tab.setAttribute("tabindex", "0");
-
-        const panelId = tab.getAttribute("aria-controls");
-        const activePanel = document.getElementById(panelId);
-
-        if (activePanel) {
-            activePanel.hidden = false;
+        // Do not overwrite the booking time input
+        if (timeElement && timeElement.tagName !== "INPUT") {
+            timeElement.textContent = `${hours}:${minutes}:${seconds}`;
         }
-    });
-});
+    }
 
+    displayTime();
+    setInterval(displayTime, 1000);
+
+
+    // Display current date on the home page
+    const homeDate = document.getElementById("home-date");
+
+    if (homeDate) {
+        const today = new Date();
+        homeDate.textContent = today.toDateString();
+    }
+
+});
