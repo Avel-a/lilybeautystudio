@@ -120,7 +120,11 @@ The main improvements I made were:
 
 * Introduced a JavaScript hamburger menu: I included a three-line menu button for smaller screens. When visitors click the button, the navigation links open, and when they click it again, the menu closes. This makes it easier to navigate the website on mobile devices.
 
-I also made an effort to commit my work to GitHub more regularly after receiving feedback from my lecturer. This helped me keep a record of my progress and the changes I made during Part 3
+* Introduced a live clock and current date and time I used JavaScript to display the current date and time on the website. The information updates automatically, allowing visitors to see the current time when viewing the website.
+
+* Redesigned the footer: I improved the footer layout and appearance to make it more organised and consistent with the rest of the website. I adjusted the positioning of the footer content, social media links and copyright information to improve the overall presentation.
+
+I also made an effort to commit my work to GitHub more regularly after receiving feedback from my lecturer. This helped me keep a record of my progress and the changes I made during Part 3.
 
 ## *JavaScript*
 ---------------------------------------
