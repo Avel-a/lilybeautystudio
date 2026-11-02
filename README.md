@@ -94,6 +94,36 @@ I added media queries to make the website work better on different screen sizes.
 
 I changed the layout, font sizes, navigation, images and spacing for smaller screens. This helps the website look better when it is viewed on a phone or tablet.
 
+## Changelog part 3
+----------------------
+## Part 3 – Changelog
+
+I did not make any changes on my part 2, I continued working on my existing website by improving the layout of the Gallery and Contact Us pages and adding interactive features based on the requirements of the third part of the POE.
+
+The main improvements I made were:
+
+* Redesigned the Gallery page layout: I changed the arrangement of the images to make the gallery look more organised and visually appealing. I improved the spacing and presentation of the images to make it easier for visitors to browse through them.
+
+* I added a Gallery lightbox: I made it possible for visitors to click on an image and view a larger version of it. I also included next and previous controls so visitors can move between images without having to close the lightbox each time.
+
+* I added a Gallery search and sorting features: I included functionality to help visitors find specific gallery content more easily and organise the displayed items.
+
+* Improved the Contact Us page layout: I redesigned the layout to make the contact information and form better positioned. This makes the page easier to read and allows visitors to find the business's contact details more easily.
+
+* I added a the Services page with interactive accordion buttons: Visitors can click on the accordion buttons to expand or close the different service sections. This allows them to view information about the services and their prices without having all the information displayed at once.
+
+* Improved the About Us accordion styling: I adjusted the appearance of the accordion buttons so that their normal and hover colours are consistent with the website's design.
+
+* I added the Inquiry form using JavaScript validation: The form checks the information entered by visitors, including the required fields and selected date. This helps prevent visitors from submitting incomplete or incorrect information.
+
+* Included a form confirmation message: After a successful submission, visitors receive a message confirming that their inquiry has been submitted.
+
+* I added the website's SEO: I worked on the page titles and meta descriptions to help search engines understand the content of the different pages.
+
+* Introduced a JavaScript hamburger menu: I included a three-line menu button for smaller screens. When visitors click the button, the navigation links open, and when they click it again, the menu closes. This makes it easier to navigate the website on mobile devices.
+
+I also made an effort to commit my work to GitHub more regularly after receiving feedback from my lecturer. This helped me keep a record of my progress and the changes I made during Part 3
+
 ## *Social Media*
 -----------------------
 I added social-media links to the footer of the website.
