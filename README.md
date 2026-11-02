@@ -57,15 +57,18 @@ The main improvements I made were:
 * Improved the responsive navigation, images and text.
 
   ## Mobile phone
-  <img width="222" height="440" alt="Screenshot 2026-09-18 160513" src="https://github.com/user-attachments/assets/930a294a-2675-43de-94ee-18071481e515" />
+  <img width="275" height="451" alt="Screenshot 2026-11-02 131217" src="https://github.com/user-attachments/assets/34699f9a-3c9c-4456-950b-4b2b305a94fb" />
+
  ## Tablet
-<img width="317" height="395" alt="Screenshot 2026-09-18 160544" src="https://github.com/user-attachments/assets/71e9f79f-cb81-4177-b683-930af92e8576" />
+<img width="319" height="405" alt="Screenshot 2026-11-02 131242" src="https://github.com/user-attachments/assets/1a41dcaf-2271-48b4-99a2-caa67cbfbac8" />
+
 
  ## Desktop
-<img width="316" height="443" alt="Screenshot 2026-09-18 160607" src="https://github.com/user-attachments/assets/81e4badd-01a5-4cd5-a4d1-fa22a8c020d9" />
+<img width="311" height="461" alt="Screenshot 2026-11-02 131407" src="https://github.com/user-attachments/assets/5db69620-a56b-4f0b-b6d0-5c526a6b6758" />
+
 
  ## Laptop
-<img width="505" height="322" alt="Screenshot 2026-09-18 160623" src="https://github.com/user-attachments/assets/8e06cc36-747f-491c-b60d-b00cd408c898" />
+<img width="494" height="321" alt="Screenshot 2026-11-02 131426" src="https://github.com/user-attachments/assets/b419b323-1c3c-4556-9a7c-89127785653c" />
 
 ## *CSS*
 ---------------------------------------
