@@ -94,10 +94,8 @@ I added media queries to make the website work better on different screen sizes.
 
 I changed the layout, font sizes, navigation, images and spacing for smaller screens. This helps the website look better when it is viewed on a phone or tablet.
 
-## Changelog part 3
-----------------------
 ## Part 3 – Changelog
-
+---------------------
 I did not make any changes on my part 2, I continued working on my existing website by improving the layout of the Gallery and Contact Us pages and adding interactive features based on the requirements of the third part of the POE.
 
 The main improvements I made were:
@@ -123,6 +121,25 @@ The main improvements I made were:
 * Introduced a JavaScript hamburger menu: I included a three-line menu button for smaller screens. When visitors click the button, the navigation links open, and when they click it again, the menu closes. This makes it easier to navigate the website on mobile devices.
 
 I also made an effort to commit my work to GitHub more regularly after receiving feedback from my lecturer. This helped me keep a record of my progress and the changes I made during Part 3
+
+## *JavaScript*
+---------------------------------------
+
+I used JavaScript to add interactive features to my website and make it easier for visitors to use.
+
+The JavaScript was used for:
+
+* Interactive accordion buttons on the Services and About Us pages.
+* Expanding and closing service information when visitors click the accordion buttons.
+* Gallery lightbox to display larger images.
+* Next and previous buttons to move between gallery images.
+* Gallery search and sorting features to help visitors find and organise images.
+* Form validation to check the information entered by visitors.
+* Displaying a confirmation message after a successful inquiry submission.
+* A back-to-top button to help visitors return to the top of the page.
+* A hamburger menu to open and close the navigation links on smaller screens.
+
+I also used JavaScript to make the website respond to visitors' actions. This makes the website more interactive and easier to navigate.
 
 ## *Social Media*
 -----------------------
@@ -151,4 +168,10 @@ Tristan (2026). How much does a website cost in South Africa? 2026 Guide. [onlin
 W3Schools. (2026). HTML Tutorial. [online] Available at: https://www.w3schools.com/html/default.asp.
 https://youtu.be/jTCszDmUw5Y?si=nSpZDGy-uQF7J3T9
 https://youtu.be/3KOIxny7sPo?si=FwkwBA21PLubg_Oe
+W3Schools (n.d.). JavaScript DOM Navigation. [online] W3Schools. Available at: https://www.w3schools.com/js/js_htmldom_navigation.asp.
+‌www.w3schools.com. (n.d.). JavaScript Date Objects. [online] Available at: https://www.w3schools.com/js/js_dates.asp.
+‌W3Schools (n.d.). JavaScript Form Validation. [online] W3Schools. Available at: https://www.w3schools.com/js/js_validation.asp.
+‌W3Schools (n.d.). HTML DOM Element scrollIntoView() Method. [online] W3Schools. Available at: https://www.w3schools.com/jsref/met_element_scrollintoview.asp.
+‌JavaScript Tutorial for Beginners: Learn JavaScript in 1 Hour [2019]. (2018). [YouTube Video] Directed by M. Hamedani. Available at: https://www.youtube.com/watch?v=W6NZfCO5SIk.
+‌
 
